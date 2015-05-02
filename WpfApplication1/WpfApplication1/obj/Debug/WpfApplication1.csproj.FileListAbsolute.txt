@@ -1,0 +1,45 @@
+c:\users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csprojResolveAssemblyReference.cache
+c:\users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
+c:\users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.g.cs
+c:\users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\App.g.cs
+c:\users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+c:\users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
+C:\Users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.exe.config
+C:\Users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.exe
+C:\Users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.pdb
+C:\Users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen_MarkupCompile.cache
+C:\Users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.g.resources
+C:\Users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.exe
+C:\Users\shangwu\documents\visual studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.pdb
+E:\projects\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.exe.config
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.exe
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.pdb
+E:\projects\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.exe
+E:\projects\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.pdb
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csprojResolveAssemblyReference.cache
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.g.cs
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\App.g.cs
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen_MarkupCompile.cache
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.g.resources
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+E:\projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.exe.config
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.exe
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.pdb
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.exe
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.pdb
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csprojResolveAssemblyReference.cache
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.g.cs
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\App.g.cs
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen_MarkupCompile.cache
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.g.resources
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
+D:\Users\Administrator\Documents\Visual Studio 2012\Projects\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.exe.config
+D:\Users\Administrator\Documents\Visual Studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.exe
+D:\Users\Administrator\Documents\Visual Studio 2012\Projects\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.pdb
+D:\Users\Administrator\Documents\Visual Studio 2012\Projects\Practice\WpfApplication1\WpfApplication1\bin\Debug\StockReportGen.exe.config
+D:\Users\Administrator\Documents\Visual Studio 2012\Projects\Practice\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.exe
+D:\Users\Administrator\Documents\Visual Studio 2012\Projects\Practice\WpfApplication1\WpfApplication1\obj\Debug\StockReportGen.pdb
