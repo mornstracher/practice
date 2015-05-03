@@ -19,7 +19,7 @@ namespace WpfApplication1
         public Decimal Fee { get; set; }
         public Decimal VAT { get; set; }
         public Decimal Total { get; set; }
-        public const string FoundsFlow_Pattern = "";
+        public const string FoundsFlow_Pattern = @"(A403409969|0152854725)\s*(\d{6})-(\w*)\s*(\d*\.\d{2,3})\s*(\d*\.\d{2,3}\s*){5}\s*(\d*\.\d{2,3})\s*(\d*\.\d{2,3})";
         public static FoundsFlow TryParse(string text)
         {
             List<string> strArray=  Utilitly.ExtractFieldsValue(text);
