@@ -19,26 +19,28 @@ namespace WpfApplication1
         public Decimal Fee { get; set; }
         public Decimal VAT { get; set; }
         public Decimal Total { get; set; }
-        public const string FoundsFlow_Pattern = @"(A403409969|0152854725)\s*(\d{6})-(\w*)\s*(\d*\.\d{2,3})\s*(\d*\.\d{2,3}\s*){5}\s*(\d*\.\d{2,3})\s*(\d*\.\d{2,3})";
+        public const string FoundsFlow_Pattern = @"(201[4|5]\d{4})\s*(980518597383|A403409969|0152854725|\s{10})\s*(00050[1|3]*)\s*(\w*)\s*(\d*\.\d{2,3})\s*(\d*\.\d{2,3})\s*(\d*\.\d{2,3})\s*(\d*\.\d{2,3})\s*(-?\d*\.\d{2,3})\s*(-?\d*\.\d{2,3})";
         public static FoundsFlow TryParse(string text)
         {
-            List<string> strArray=  Utilitly.ExtractFieldsValue(text);
+            System.Text.RegularExpressions.Match m = System.Text.RegularExpressions.Regex.Match(text, FoundsFlow_Pattern);
+            if (m.Groups.Count == 11)
+            {
+                FoundsFlow ff = new FoundsFlow();
+                ff.Date = DateTime.ParseExact(m.Groups[1].Value, "yyyyMMdd", System.Globalization.CultureInfo.CurrentCulture);
+                ff.IdentityCode = m.Groups[2].Value;
+                ff.DealerCode = m.Groups[3].Value;
+                ff.Description = m.Groups[4].Value;
+                ff.Quantity = decimal.Parse(m.Groups[5].Value);
+                ff.Price = decimal.Parse(m.Groups[6].Value);
+                ff.Fee = decimal.Parse(m.Groups[7].Value);
+                ff.VAT = decimal.Parse(m.Groups[8].Value);
+                ff.Total = decimal.Parse(m.Groups[9].Value);
 
-            if (strArray.Count == FIELDS_COUNT - 1) strArray.Insert(1, "");
-            if (strArray.Count != FIELDS_COUNT) return null;
+                return ff;
 
-            FoundsFlow ff = new FoundsFlow();
-            ff.Date = DateTime.ParseExact(strArray[0],"yyyyMMdd" ,System.Globalization.CultureInfo.CurrentCulture);
-            ff.IdentityCode = strArray[1];
-            ff.DealerCode = strArray[2];
-            ff.Description = strArray[3];
-            ff.Quantity = decimal.Parse(strArray[4]);
-            ff.Price = decimal.Parse(strArray[5]);
-            ff.Fee = decimal.Parse(strArray[6]);
-            ff.VAT = decimal.Parse(strArray[7]);
-            ff.Total = decimal.Parse(strArray[8]);
-
-            return ff;
+            }
+          
+            return null;
         }
     }
 }
