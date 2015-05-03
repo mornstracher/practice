@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApplication1
 {
-   public static class Utilitly
+   public static class Utility
     {
        public static string RemoveXDR(string stockName)
        {

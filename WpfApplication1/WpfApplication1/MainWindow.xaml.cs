@@ -52,7 +52,7 @@ namespace WpfApplication1
                 if (ff.Description.Contains("证券买入") || ff.Description.Contains("证券卖出"))
                 {
                     string stockName = ff.Description.Substring(4, ff.Description.Length - 4);
-                    stockName = Utilitly.RemoveXDR(stockName);
+                    stockName = Utility.RemoveXDR(stockName);
 
                     stockName = this.SearchStock(stockName);
                     dicStockProfit[stockName] += ff.Total;
@@ -70,16 +70,24 @@ namespace WpfApplication1
             this.txtResult.Text += SEPARATOR;
             this.txtResult.Text += SEPARATOR;
             totalProfit = 0m;
+            List<StockProfit> lstStockProfit = new List<StockProfit>();
             foreach (var t in dicStockProfit.OrderBy(kvp=>kvp.Value))
             {
                 totalProfit += t.Value;
                 this.txtResult.Text += GetLineForTwoFields(t.Key, t.Value);// string.Format(FORMAT_TEMPLATE_TWO_FIELDS, t.Key.PadRight(16, SPACE_HAN), t.Value);
+               // if(t.Value>0)
+                lstStockProfit.Add(new StockProfit() { StockName = t.Key, Total = t.Value });
             }
             this.txtResult.Text += SEPARATOR;
             this.txtResult.Text += GetLineForTwoFields("总利润", totalProfit);//string.Format(FORMAT_TEMPLATE_TWO_FIELDS, "总利润".PadRight(16, SPACE_HAN), (totalProfit + this.curVal));
             this.txtResult.Text += SEPARATOR;
             this.total = totalCost + this.totalProfit;
             this.txtResult.Text += GetLineForTwoFields("共计", this.total);
+
+            ChartWin window = new ChartWin();
+            
+            window.Show();
+            window.SetDataSource(lstStockProfit);
         }
 
         private string SearchStock(string stockName)
@@ -201,10 +209,29 @@ namespace WpfApplication1
         {
             var query = from q in this.lstFoundsFlow
                         where q.Description.Contains("证券买入") || q.Description.Contains("证券卖出")
-                        group q by new { StockName = q.Description.Substring(4, q.Description.Length - 4), TransactionDate =new DateTime(q.Date.Year,q.Date.Month,1) } into g
+                        group q by new { StockName = Utility.RemoveXDR(q.Description.Substring(4, q.Description.Length - 4)), TransactionDate =new DateTime(q.Date.Year,q.Date.Month,1) } into g
                         select new { StockName = g.Key.StockName, TransactionDate = g.Key.TransactionDate, Amount =g.Sum(q=>q.Total)};
-             //var gq=from st in query
-             //       group st by new {Month=st.TransactionDate,st.StockName
+            this.txtResult.Text+=SEPARATOR;
+            decimal monthTotal = 0m;
+            DateTime dateTime = DateTime.MinValue;
+            foreach (var q in query.OrderBy(i=>i.TransactionDate))
+            {
+                if (q.TransactionDate != dateTime && dateTime != DateTime.MinValue)
+                {
+                    this.txtResult.Text += SEPARATOR;
+                    this.txtResult.Text += GetLineForTwoFields("总计", monthTotal);
+                    this.txtResult.Text += SEPARATOR;
+                    monthTotal = 0m;
+                }
+                this.txtResult.Text += string.Format("{0,-8:yyyyMM} {1} {2,15:N2} \n", q.TransactionDate, q.StockName.PadRight(16, SPACE_HAN), q.Amount);
+                monthTotal += q.Amount;
+                dateTime = q.TransactionDate;
+            }
+
+            this.txtResult.Text += SEPARATOR;
+            this.txtResult.Text += GetLineForTwoFields("总计", monthTotal);
+            this.txtResult.Text += SEPARATOR;
+          
         }
 
     }

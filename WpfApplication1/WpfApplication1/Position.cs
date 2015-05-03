@@ -25,7 +25,7 @@ namespace WpfApplication1
            {
                Position position = new Position();
                position.ProductNo = m.Groups[2].Value;
-               position.ProductName = Utilitly.RemoveXDR(m.Groups[3].Value);
+               position.ProductName = Utility.RemoveXDR(m.Groups[3].Value);
                position.Quantity = decimal.Parse(m.Groups[4].Value);
                position.CostPrice = decimal.Parse(m.Groups[7].Value);
                position.Total = decimal.Parse(m.Groups[6].Value);
