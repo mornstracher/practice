@@ -11,6 +11,7 @@
             <Button x:Name="btnRead" MinWidth="50" Content="读取" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top"  Click="Button_Click_1"/>
             <Button x:Name="btnByStock"  MinWidth="50" Content="按股票 汇总" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" Click="btnByStock_Click"/>
             <Button x:Name="btnPositions"  MinWidth="50" Content="持仓" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top"  Click="btnPositions_Click"/>
+            <Button x:Name="btnTimeSplit"  Content="各月收益" MinWidth="50" Margin="10,23,0,0" Click="btnTimeSplit_Click" />
         </StackPanel>
         <ScrollViewer  DockPanel.Dock="Bottom"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
             <TextBlock x:Name="txtResult"  HorizontalAlignment="Left" TextWrapping="Wrap" FontFamily="SimSun" MinHeight="400"/>

@@ -70,7 +70,7 @@ namespace WpfApplication1
             this.txtResult.Text += SEPARATOR;
             this.txtResult.Text += SEPARATOR;
             totalProfit = 0m;
-            foreach (var t in dicStockProfit)
+            foreach (var t in dicStockProfit.OrderBy(kvp=>kvp.Value))
             {
                 totalProfit += t.Value;
                 this.txtResult.Text += GetLineForTwoFields(t.Key, t.Value);// string.Format(FORMAT_TEMPLATE_TWO_FIELDS, t.Key.PadRight(16, SPACE_HAN), t.Value);
@@ -195,6 +195,16 @@ namespace WpfApplication1
             }
             this.txtResult.Text += SEPARATOR;
             this.txtResult.Text += GetLineForTwoFields("总市值", curVal);
+        }
+
+        private void btnTimeSplit_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from q in this.lstFoundsFlow
+                        where q.Description.Contains("证券买入") || q.Description.Contains("证券卖出")
+                        group q by new { StockName = q.Description.Substring(4, q.Description.Length - 4), TransactionDate =new DateTime(q.Date.Year,q.Date.Month,1) } into g
+                        select new { StockName = g.Key.StockName, TransactionDate = g.Key.TransactionDate, Amount =g.Sum(q=>q.Total)};
+             //var gq=from st in query
+             //       group st by new {Month=st.TransactionDate,st.StockName
         }
 
     }
