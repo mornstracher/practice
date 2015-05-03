@@ -1,0 +1,20 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApplication1.MainWindow"
+        Title="MainWindow"  SizeToContent="Width" >
+
+    <DockPanel HorizontalAlignment="Left" VerticalAlignment="Top"  LastChildFill="True" >
+        <StackPanel Orientation="Horizontal"  DockPanel.Dock="Top">
+            <Label Content=" 对账单 " HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtFileBox" HorizontalAlignment="Left" Height="23" Margin="20,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="D:\Users\Administrator\Documents\GitHub\StockReportGen\WpfApplication1\Data"/>
+            <Button x:Name="btnRead" Content="读取" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top"  Click="Button_Click_1"/>
+            <Button x:Name="btnByStock" Content="按股票 汇总" HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top" Click="btnByStock_Click"/>
+            <Button x:Name="btnPositions" Content="持仓" HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top"  Click="btnPositions_Click"/>
+        </StackPanel>
+        <ScrollViewer  DockPanel.Dock="Bottom"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <TextBlock x:Name="txtResult"  HorizontalAlignment="Left" TextWrapping="Wrap" FontFamily="SimSun"/>
+        </ScrollViewer>
+    </DockPanel>
+
+</Window>
